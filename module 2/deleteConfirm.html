@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete confirm</title>
+</head>
+<body>
+    <h1 id="content">This is a content</h1>
+    <input id="confirm-dlt" type="text">
+    <button id="dlt-btn" disabled>Delete</button>
+
+    <script>
+        document.getElementById("confirm-dlt").addEventListener("keyup", function(event){
+            const text  = event.target.value;
+            const dltButton = document.getElementById("dlt-btn");
+            if(text == "delete"){
+                dltButton.removeAttribute("disabled");
+            }
+            else{
+                dltButton.setAttribute("disabled", true)
+            }
+        })
+
+        document.getElementById("dlt-btn").addEventListener("click", function(){
+            const content = document.getElementById("content");
+            content.style.display = "none";
+        })
+    </script>
+</body>
+</html>

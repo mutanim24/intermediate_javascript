@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event listener</title>
+</head>
+<body>
+    <h1 id="default-text">default text</h1>
+    <button onclick="byFunction()">change by function</button>
+    <button id="by-event-litener">change by eventListener</button>
+
+    <br><br><hr><hr>
+    <p id="default-value">default value</p>
+    <input type="text" name="" id="input-field">
+    <button id="update">update</button>
+
+    <script>
+        //option 1
+        function byFunction(){
+            const defaultText = document.getElementById("default-text");
+            defaultText.innerText = 'change by function';
+        }
+        //option 2
+        document.getElementById("by-event-litener").addEventListener("click", function(){
+            const defaultText = document.getElementById("default-text");
+            defaultText.innerText = "change by event listener"
+        })
+
+        //recap
+        document.getElementById("update").addEventListener("click", function(){
+            const defaultValue = document.getElementById("default-value");
+            const inputField = document.getElementById("input-field");
+            defaultValue.innerText = inputField.value;
+            inputField.value = "";
+        })
+
+
+    </script>
+</body>
+</html>

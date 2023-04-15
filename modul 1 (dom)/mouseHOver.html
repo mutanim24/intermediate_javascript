@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes follow {
+            from {
+                transform: translate(-50%, -50%);
+            }
+
+            to {
+                transform: translate(calc(var(--x, 0) - 50%), calc(var(--y, 0) - 50%));
+            }
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 2em;
+            cursor: none;
+            user-select: none;
+            animation: follow 0.2s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heart">❤️</div>
+    <script>
+        const heart = document.querySelector('.heart');
+
+        document.addEventListener('mousemove', (e) => {
+            heart.style.setProperty('--x', e.pageX + 'px');
+            heart.style.setProperty('--y', e.pageY + 'px');
+        });
+
+
+    </script>
+</body>
+
+</html>

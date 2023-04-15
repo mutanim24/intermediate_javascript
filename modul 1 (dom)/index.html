@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom....</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <h1 id="fruit-title">Fruits name</h1>
+        <ul>
+            <li class="fruit">orange</li>
+            <li class="fruit">orange</li>
+            <li class="fruit">orange</li>
+            <li class="fruit">orange</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Fifa world cup</h1>
+        <ul>
+            <li class="game">footabal</li>
+            <li class="game">footabal</li>
+            <li class="game">footabal</li>
+            <li class="game">footabal</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Game name</h1>
+        <ul id="games">
+            <li class="cricket">cricket</li>
+            <li class="cricket">cricket</li>
+            <li class="cricket">cricket</li>
+            <li class="cricket">cricket</li>
+        </ul>
+    </section>
+    <div id="identity">
+        <h1>Tanim</h1>
+        <h3>vill: magura</h3>
+        <p>Roll: 476645</p>
+    </div>
+    <h1 class="ban">BAN</h1>
+
+    <script>
+        //get element by id 
+        const fruitTitle = document.getElementById('fruit-title');
+        fruitTitle.innerText = "fruit title edit by js";
+        //get element by class
+        const fruit = document.getElementsByClassName("fruit");
+        for(let frt of fruit){
+            console.log(frt);
+        }
+
+        //query selector all
+        const games = document.querySelectorAll(".game");
+        for(const game of games){
+            console.log(game.innerText);
+        }
+        //query selector // return the firs html tag
+        const crickets = document.querySelector(".cricket");
+        console.log(crickets.innerText);
+        
+        //ban
+        const ban = document.getElementsByClassName("ban");
+        for(const bn of ban){
+            bn.style.padding = '10px';
+            bn.style.backgroundColor = 'green';
+            bn.style.color = 'red';
+            bn.style.textAlign = 'center';
+            bn.style.fontWeight = '800';
+        }
+
+        const games2 = document.getElementById("games");
+        games2.innerHTML = "<p>tanim ahmed</p>"
+
+
+        const addClass = document.getElementById("identity");
+        addClass.classList.add("identity");
+    
+    </script>
+    <script src="./hello.js"></script>
+</body>
+</html>

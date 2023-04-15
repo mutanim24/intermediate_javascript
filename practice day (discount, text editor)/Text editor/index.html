@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/16f4b2258a.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    button{
+        padding: 0 8px;
+        font-weight: 800;
+
+    }
+</style>
+
+<body class="bg-cyan-800">
+    <main>
+        <section class="border-2 w-9/12 mx-auto p-5 mt-9">
+            <h1 class="text-4xl font-bold text-center mb-4">Text editor</h1>
+            <div class="border-2">
+                <div class="grid grid-cols-3 gap-3 p-4">
+                    <div>
+                        <button id="bold"><i class="fa-sharp fa-solid fa-bold"></i></button>
+                        <button class="mx-4" id="italic"><i class="fa-sharp fa-solid fa-italic"></i></button>
+                        <button id="underline"><i class="fa-sharp fa-solid fa-underline"></i></button>
+                    </div>
+                    <div class="mx-auto">
+                        <button id="left"><i class="fa-solid fa-align-left"></i></button>
+                        <button class="mx-4" id="center"><i class="fa-sharp fa-solid fa-align-center"></i></button>
+                        <button id="right"><i class="fa-solid fa-align-right"></i></button>
+                    </div>
+                    <div class="text-right">
+                        <input class="w-3/12" id="font-size" type="number" value="16">
+                        <button class="mx-4 font-bold" id="upper-case">Aa</button>
+                        <input type="color" name="" id="input-color">
+                    </div>
+                </div>
+                <hr>
+                <div class="">
+                    <textarea  placeholder="Write your text" class="w-full h-72 p-2 border-0" name="" id="inputText" cols="120" rows="10"></textarea>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./hello.js"></script>
+</body>
+
+</html>

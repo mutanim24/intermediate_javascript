@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+</head>
+
+<body>
+
+    <button title="tanim" onclick="console.log('clicked')">click me</button>
+    <button onclick="document.body.style.backgroundColor = 'red'">red</button>
+    <button onclick="beRed()">green</button>
+    <button id="pink">pink</button>
+    <button id="orange">Orange</button>
+    <button id="cyan">Cyan</button>
+</body>
+
+<script>
+    function beRed(){
+        document.body.style.backgroundColor = 'green';
+    }
+
+    function bePink(){
+        document.body.style.backgroundColor = "pink";
+    }
+    const pink = document.getElementById("pink");
+    pink.onclick = bePink;
+
+    const orange = document.getElementById("orange");
+    orange.addEventListener("click", function beOrange(){
+        document.body.style.backgroundColor = "orange";
+    })
+
+    document.getElementById("cyan").addEventListener("click", function(){
+        document.body.style.backgroundColor = "cyan";
+    })
+</script>
+
+</html>

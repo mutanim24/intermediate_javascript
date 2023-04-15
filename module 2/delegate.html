@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+<body>
+    <h1>Delegate</h1>
+    <section>
+        <ul id="item-container">
+            <li class="item">item-1</li>
+            <li class="item">item-2</li>
+            <li class="item">item-3</li>
+            <li class="item">item-4</li>
+            <li class="item">item-5</li>
+        </ul>
+    </section>
+    <button id="add-btn"> add item</button>
+
+    <script>
+        const items = document.getElementsByClassName("item");
+        for(const item of items){
+            item.addEventListener("click", function(event){
+                event.target.parentNode.removeChild(event.target);
+            });
+        }
+
+        document.getElementById("add-btn").addEventListener("click", function(){
+
+            console.log("clicked");
+
+        })
+    </script>
+</body>
+</html>

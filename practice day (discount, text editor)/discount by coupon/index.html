@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #btn-apply{
+            color: white;
+            padding: 8px 15px ;
+            border-radius: 5px;
+            background-color: rgb(255, 23, 62);
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    
+    <main>
+        <section class="w-6/12 mx-auto border-4 text-white p-5">
+            <img src="./image/shoe-1.png" alt="">
+            <div>
+                <h2 class="text-4xl">Nike shoes</h2>
+                <hr>
+                <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quia sequi repellendus repudiandae magni dignissimos, natus voluptates incidunt minima architecto. Ea eos ducimus pariatur labore neque ab aperiam id repellat.</p>
+                <h1 class="font-semibold mb-3">Price: $<span id="price" class="text-3xl">120</span></h1>
+                <input id="couponField" placeholder="write 'DISC30%' for 30% off" type="text" class="p-2 w-6/12 rounded-lg text-black">
+                <button class="ml-3" type="button" id="btn-apply" disabled>FOR 30%</button>
+                <h1 class="font-semibold">Pay Now: $<span id="discountPrice" class="text-3xl"></span></h1>
+            </div>
+
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
